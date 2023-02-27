@@ -1,26 +1,24 @@
 import Home from "../../Pages/Home/Home";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
+import Header from "../Header/Header";
 
-const  App=()=> {
+import "../../App.css";
 
-    return (
-
-      <Router>
-        <div className="w-100">     
+const App = () => {
+  return (
+    <Router>
+      <div className="w-100">
+        <Header />
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
-        </div>
-      </Router>
-    )
-  }
+      </div>
+    </Router>
+  );
+};
 
 export default App;
