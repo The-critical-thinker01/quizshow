@@ -3,13 +3,18 @@ import logo from "./../../asset/images/logo.svg";
 import { useState } from "react";
 import { LoginUser } from "../../API/Services/userService";
 import loading_gif from "../../asset/images/loading-gif.gif";
-const Login = () => {
+import "../../App.css";
+import { useNavigate } from "react-router-dom";
+const Login = (props) => {
+  const navigate = useNavigate();
   const [email_, setEmail] = useState("");
   const [password_, setPassword] = useState("");
+  const [errors, setError] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const HandleSubmit = (e) => {
     e.preventDefault();
+    setError([]);
     setLoading(true);
     const user = {
       email: email_,
@@ -22,25 +27,33 @@ const Login = () => {
 
         console.log(res.data);
         console.log("user  login sucessfuly !!!");
+        navigate("/board");
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error);
+        const erro = Object.values(error.response.data.errors);
+        setError(erro);
       });
   };
+
+  const renderError = errors.map((item, index) => (
+    <p className="text-red-300" key={index}>
+      {item}
+    </p>
+  ));
   return (
-    <div className="bg-slate-50">
+    <div className="bg-slate-50 animeDown ">
       {loading && (
         <div className="flex w-full justify-center items-center h-full absolute bg-transparent">
           <img src={loading_gif} alt="ras" />
         </div>
       )}
-      <div className="flex flex-row mt-2 justify-center ">
+      <div className="flex flex-row mt-2 justify-center  ">
         {/* debut pour la partir login*/}
         <div className="text-4xl flex flex-col justify-start  w-1/2 items-center  ">
           <div className="flex flex-col mt-2 justify-center items-center pb-10 ">
             <img
-              className=" h-64 w-64 rounded-full bg-yellow-500  "
+              className=" h-32 w-32 rounded-full bg-yellow-500  "
               src={logo}
               alt=" Ras"
             />
@@ -53,6 +66,8 @@ const Login = () => {
               Login back to your quizshow account
             </h3>
           </div>
+
+          {renderError}
 
           <form
             className="flex flex-col  px-5 justify-start w-full text-lg "
@@ -94,8 +109,7 @@ const Login = () => {
               Login
             </button>
           </form>
-
-          <div className="flex justify-between text-lg px-4 w-full">
+          {/* <div className="flex justify-between text-lg px-4 w-full">
             &copy; 2023 Alll Rights Reserved
             <div className="flex justify-between w-2/5">
               <a href="/" className="underline hover:cursor-pointer">
@@ -105,7 +119,7 @@ const Login = () => {
                 Privacy Policy
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* insertion de l'image*/}

@@ -3,6 +3,7 @@ import logo from "./../../asset/images/logo.svg";
 import laoding_gif from "./../../asset/images/loading-gif.gif";
 import { CreateUser } from "../../API/Services/userService";
 import { useState } from "react";
+import "../../App.css";
 
 const SignUp = () => {
   const [nom_, setNom] = useState("");
@@ -32,7 +33,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div class="animeUp">
       {loading && (
         <div className="flex w-full justify-center items-center h-full absolute bg-transparent">
           <img src={laoding_gif} alt="ras" />
@@ -61,7 +62,7 @@ const SignUp = () => {
           <div className="flex flex-col  px-5 justify-start w-full text-lg ">
             <div className="flex flex-col mt-2 justify-center items-center pb-10 ">
               <img
-                className=" h-64 w-64 rounded-full bg-yellow-500  "
+                className="  h-32 w-32  rounded-full bg-yellow-500  "
                 src={logo}
                 alt=" Ras"
               />
