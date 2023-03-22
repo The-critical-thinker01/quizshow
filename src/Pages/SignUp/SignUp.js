@@ -4,16 +4,20 @@ import laoding_gif from "./../../asset/images/loading-gif.gif";
 import { CreateUser } from "../../API/Services/userService";
 import { useState } from "react";
 import "../../App.css";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [nom_, setNom] = useState("");
   const [prenom_, setPrenom] = useState("");
   const [password_, setPassword] = useState("");
+  const [errors, setError] = useState([]);
   const [email_, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError([]);
     setLoading(true);
     const user = {
       nom: nom_,
@@ -25,13 +29,19 @@ const SignUp = () => {
       .then((res) => {
         console.log(res.data);
         setLoading(false);
+        navigate("/login")
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error);
+        const erro = Object.values(error.response.data);
+        setError(erro);
       });
   };
-
+  const renderError = errors.map((item, index) => (
+    <p className="text-red-300" key={index}>
+      {item}
+    </p>
+  ));
   return (
     <div class="animeUp">
       {loading && (
@@ -75,7 +85,7 @@ const SignUp = () => {
                 Login back to your quizshow account
               </h3>
             </div>
-
+            {renderError}
             <form className="flex flex-col w-full" onSubmit={handleSubmit}>
               <div className="flex flex-col">
                 <label className=" mb-2">Nom :</label>

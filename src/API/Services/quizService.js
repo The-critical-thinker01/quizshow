@@ -12,3 +12,10 @@ export const newPlayer = async (id, name) => {
 export const answerQuestion = async (playerId, questionId, answer) => {
     return await axios.post(`http://localhost:5000/api/quizs/answer`, { playerId, questionId, answer });
 };
+
+export const GetPlayer = async (playerId) => {
+    return await axios.get(`http://localhost:5000/api/players/${playerId}`);
+};
+export const RetryPlay = async (playerId) => {
+    return await axios.get(`http://localhost:5000/api/players/retryplay/${playerId}`);
+};

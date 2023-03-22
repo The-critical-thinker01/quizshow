@@ -21,12 +21,11 @@ const Quiz = () => {
     useEffect(() => {
         GetQuizz(id).then((res) => {
             setQuiz(res.data)
-            console.log(res.data);
         }).catch((err) => {
             console.log(err)
 
         })
-    }, [])
+    }, [id])
 
     const CreateAndPlay = () => {
         if (name.length === 0) {

@@ -9,6 +9,7 @@ const Options = ({ options, SetcurrentAnswer }) => {
         const optionsDefault = options.map((item, index) => <div className="w-1/3  mt-3 mb-3 bg-cyan-400 shadow-slate-700 shadow-md text-3xl hover:bg-slate-100 h-20 rounded-2xl mx-3 flex justify-center items-center cursor-pointer" key={index} onClick={() => chooseAnswer(index, item)}> {item} </div>)
         setOptionsRender(optionsDefault)
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [options])
 
     const chooseAnswer = async (index, answer) => {

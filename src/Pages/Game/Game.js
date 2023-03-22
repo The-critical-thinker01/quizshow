@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Options from "./Options";
 import { GetQuizz, answerQuestion } from "../../API/Services/quizService";
 
@@ -7,25 +7,25 @@ import { GetQuizz, answerQuestion } from "../../API/Services/quizService";
 const Game = () => {
     const [Questions, setQuestion] = useState([{ options: [] }]);
 
-    const [Quiz, setQuiz] = useState({});
     const [indexCurentquestion, SetindexCurentquestion] = useState(0);
     const [currentAnswer, SetcurrentAnswer] = useState(0);
     const [endOfQuiz, SetEndOfQuiz] = useState(false);
+    const navigate = useNavigate();
 
     const { id, playerid } = useParams();
 
     useEffect(() => {
         GetQuizz(id).then((res) => {
-            setQuiz(res.data)
             setQuestion(res.data.questions)
         }).catch((err) => {
             console.log(err)
 
         })
-    }, [])
+    }, [id])
 
     const FinishQuiz = () => {
         sumitAnswer();
+        navigate(`/finish/${id}/${playerid}`)
     }
 
     const sumitAnswer = () => {
@@ -33,7 +33,7 @@ const Game = () => {
             SetEndOfQuiz(true)
         }
 
-        
+
         answerQuestion(playerid, Questions[indexCurentquestion]._id, currentAnswer).then((res) => {
             console.log(res)
         }).catch((err) => {
