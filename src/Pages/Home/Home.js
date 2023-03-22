@@ -6,10 +6,12 @@ import BeneficsUsingQuizShow from "./BeneficsUsingQuizShow";
 import StudentBenefics from "./StudentBenefics";
 import MakeQuizAwesom from "./MakeQuizAwesom";
 import SampleQuiz from "./SampleQuiz";
+import GameCode from "./GameCode";
 const Home = () => {
   return (
     <div className="bg-white dark:bg-black">
       <Slider />
+      <GameCode />
       <QuizPropo />
       <HowItWorks />
       <BeneficsUsingQuizShow />

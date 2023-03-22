@@ -21,7 +21,7 @@ const SampleQuiz = () => {
           <img className="w-5/6 mt-3 " src={know} alt="Happy" />
           <a
             href="/generalKnowledge"
-            className="flex justify-center  items-center pl-8 h-1/3 rounded-bl-3xl rounded-br-3xl bg-green-300 border-20 mt-4  "
+            className="flex justify-center  items-center pl-8 h-1/3 rounded-bl-3xl rounded-br-3xl hover:bg-slate-700 bg-green-300 border-20 mt-4  "
           >
             <h2 className=" text-4xl text-yellow-500">General knowledge</h2>
           </a>
@@ -31,7 +31,7 @@ const SampleQuiz = () => {
           <img className="w-5/6 mt-3 " src={mat} alt="Maths quiz" />
           <a
             href="/maths"
-            className="flex justify-center  items-center pl-8 h-1/3 rounded-bl-3xl rounded-br-3xl bg-green-300 border-2 mt-4  "
+            className="flex justify-center  items-center pl-8 h-1/3 rounded-bl-3xl rounded-br-3xl hover:bg-slate-700 bg-green-300 border-2 mt-4  "
           >
             <h2 className=" text-4xl text-yellow-500">Math Quiz for Kids</h2>
           </a>
@@ -41,7 +41,7 @@ const SampleQuiz = () => {
           <img className="w-5/6  mt-3 " src={sport} alt="Sport quiz" />
           <a
             href="/sport"
-            className="flex justify-center  items-center pl-8 h-1/3 w-full  rounded-bl-3xl rounded-br-3xl  bg-green-300   mt-4  "
+            className="flex justify-center  items-center pl-8 h-1/3 w-full  rounded-bl-3xl rounded-br-3xl hover:bg-slate-700 bg-green-300   mt-4  "
           >
             <h2 className=" text-4xl text-yellow-500">Sport for QuizShow </h2>
           </a>
@@ -51,7 +51,7 @@ const SampleQuiz = () => {
           <img className="w-5/6 mt-3 " src={food} alt="Drink and Food Quiz" />
           <a
             href="/foodDrink"
-            className="flex justify-center  items-center pl-8 h-1/3 rounded-bl-3xl rounded-br-3xl  bg-green-300   mt-4  "
+            className="flex justify-center  items-center pl-8 h-1/3 rounded-bl-3xl rounded-br-3xl hover:bg-slate-700 bg-green-300   mt-4  "
           >
             <h2 className=" text-4xl text-yellow-500">Food and Drink</h2>
           </a>
