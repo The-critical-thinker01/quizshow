@@ -12,6 +12,8 @@ import GeneralKnowledge from "../../Quiz/GeneralKnowledge";
 import Footer from "../Footer/Footer";
 import "../../App.css";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
+import Quiz from "../../Quiz/Quiz";
+import Game from "../../Pages/Game/Game";
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/board" element={<Dashboard />} />
+          <Route path="/quiz/:id" element={<Quiz />} />
+          <Route path="/game/:id/:playerid" element={<Game />} />
           <Route path="/maths" element={<Maths />} />
           <Route path="/generalKnowledge" element={<GeneralKnowledge />} />
           <Route path="/sport" element={<Sport />} />
