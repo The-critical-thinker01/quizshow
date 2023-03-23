@@ -30,7 +30,8 @@ const Login = (props) => {
       })
       .catch((error) => {
         setLoading(false);
-        const erro = Object.values(error.response.data);
+        console.log(error)
+        const erro = Object.values(error.response.data.errors);
         setError(erro);
       });
   };

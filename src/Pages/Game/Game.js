@@ -15,34 +15,44 @@ const Game = () => {
     const { id, playerid } = useParams();
 
     useEffect(() => {
+
         GetQuizz(id).then((res) => {
             setQuestion(res.data.questions)
+            SetEndOfQuiz(res.data.questions.length === 1)
         }).catch((err) => {
             console.log(err)
-
         })
     }, [id])
 
     const FinishQuiz = () => {
-        sumitAnswer();
-        navigate(`/finish/${id}/${playerid}`)
-    }
-
-    const sumitAnswer = () => {
-        if (indexCurentquestion === Questions.length - 2) {
-            SetEndOfQuiz(true)
-        }
-
-
         answerQuestion(playerid, Questions[indexCurentquestion]._id, currentAnswer).then((res) => {
-            console.log(res)
+            navigate(`/finish/${id}/${playerid}`)
         }).catch((err) => {
             console.log(err)
         })
 
-        if (indexCurentquestion !== Questions.length - 1) {
-            SetindexCurentquestion(indexCurentquestion + 1);
+
+    }
+
+    const sumitAnswer = () => {
+        console.log(indexCurentquestion, Questions.length, " avant ")
+        answerQuestion(playerid, Questions[indexCurentquestion]._id, currentAnswer).then((res) => {
+
+        }).catch((err) => {
+            console.log(err)
+        })
+        if (Questions.length === 2) {
+            SetEndOfQuiz(true);
         }
+        if (indexCurentquestion !== Questions.length - 1)
+            SetindexCurentquestion(indexCurentquestion + 1);
+
+        if (indexCurentquestion === Questions.length - 3) {
+            SetEndOfQuiz(true);
+        }
+        console.log(indexCurentquestion, Questions.length, " apres ")
+
+
     }
     return (
         <div className="w-full">
@@ -55,7 +65,7 @@ const Game = () => {
 
                 {endOfQuiz ? (
                     <button onClick={() => FinishQuiz()} className="w-3/6 mt-3 mb-3 bg-green-400 shadow-slate-700 shadow-md text-5xl hover:bg-slate-100 h-14 rounded-2xl ">
-                        End
+                        Submit
                     </button>
                 ) : <button onClick={() => sumitAnswer()} className="w-3/6 mt-3 mb-3 bg-green-400 shadow-slate-700 shadow-md text-5xl hover:bg-slate-100 h-14 rounded-2xl ">
                     next

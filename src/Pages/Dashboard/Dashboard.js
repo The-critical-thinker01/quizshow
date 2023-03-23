@@ -7,6 +7,7 @@ const Dashboard = (props) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [nom, setNom] = useState("");
+  const [Quizs, setQuiz] = useState([]);
 
 
   useEffect(() => {
@@ -14,9 +15,10 @@ const Dashboard = (props) => {
     GetUser(userId).then((res) => {
       setEmail(res.data.email)
       setNom(res.data.nom);
+      setQuiz(res.data.quizs)
     }).catch((err) => {
       console.log(err)
-    })
+    });
   }, [])
 
   return (
@@ -145,6 +147,20 @@ const Dashboard = (props) => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <h2> Add Quiz </h2>
+        </div>
+
+        <div className=" mt-2 p-4 border-t flex w-full space-x-4">
+
+          {Quizs.map((item, index) => {
+            return (
+
+              <div key={index} className="p-6 flex flex-col bg-white rounded-lg w-1/4 items-center cursor-pointer" onClick={() => { navigate(`/questionsboard/${item._id}`) }}>
+
+                <h2> {item.name} </h2>
+
+              </div >)
+          })
+          }
         </div>
 
       </div>

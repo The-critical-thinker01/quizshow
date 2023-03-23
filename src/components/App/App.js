@@ -16,6 +16,10 @@ import Quiz from "../../Quiz/Quiz";
 import Game from "../../Pages/Game/Game";
 import FinishPage from "../../Pages/FinishPage/FinishPage";
 import AddQuiz from "../../Pages/Addquiz/Addquiz";
+import QuestionBoard from "../../Pages/QuestionsBoard/QuestionsBoard";
+import AddQuestion from "../../Pages/AddQuestion/AddQuestions";
+import Players from "../../Pages/Players/Players";
+import Share from "../../Pages/Share/Share";
 
 const App = () => {
   return (
@@ -31,8 +35,15 @@ const App = () => {
           <Route path="/board" element={<Dashboard />} />
           <Route path="/quiz/:id" element={<Quiz />} />
           <Route path="/addquiz" element={<AddQuiz />} />
+          <Route path="/questionsboard/:id" element={<QuestionBoard />} />
+          <Route path="/addquestion/:id" element={<AddQuestion />} />
+          <Route path="/players/:id" element={<Players />} />
+          <Route path="/editquestion/:editId" element={<AddQuestion />} />
           <Route path="/game/:id/:playerid" element={<Game />} />
           <Route path="/finish/:id/:playerid" element={<FinishPage />} />
+          <Route path="/share/:id" element={<Share />} />
+
+
           <Route path="/maths" element={<Maths />} />
           <Route path="/generalKnowledge" element={<GeneralKnowledge />} />
           <Route path="/sport" element={<Sport />} />

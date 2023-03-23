@@ -4,7 +4,6 @@ import man from "../asset/images/man.png";
 import man2 from "../asset/images/man2.png";
 import boy2 from "../asset/images/boy2.png";
 import { GetQuizz, newPlayer } from "../API/Services/quizService";
-
 import { useNavigate, useParams } from 'react-router-dom';
 
 
@@ -15,8 +14,6 @@ const Quiz = () => {
     const [name, SetName] = useState("");
     const { id } = useParams();
     const navigate = useNavigate();
-
-
 
     useEffect(() => {
         GetQuizz(id).then((res) => {
