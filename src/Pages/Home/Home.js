@@ -8,16 +8,17 @@ import MakeQuizAwesom from "./MakeQuizAwesom";
 import SampleQuiz from "./SampleQuiz";
 import GameCode from "./GameCode";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../../components/Header/Navbar";
+import Header from "../../components/Header/Header";
 const Home = () => {
-
   const navigate = useNavigate();
 
   useEffect(() => {
-    const userid = sessionStorage.getItem('userId');
-    if(userid){
-      navigate('/board')
+    const userid = sessionStorage.getItem("userId");
+    if (userid) {
+      navigate("/board");
     }
-  }, [navigate])
+  }, [navigate]);
   return (
     <div className="bg-white dark:bg-black">
       <Slider />

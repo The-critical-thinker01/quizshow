@@ -15,8 +15,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
-            <div className="col-span-2">
+          <div className="mt-8 grid grid-cols-2 gap-2 md:mt-0 md:grid-cols-5 md:gap-y-16">
+            <div className="md:col-span-2">
               <div>
                 <h2 className="text-2xl font-bold text-white">
                   welcome To QuizShow !
@@ -29,19 +29,18 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
+            <div className="col-span-2 md:col-span-3 md:flex md:items-end">
               <form className="w-full">
                 <label htmlFor="UserEmail" className="sr-only">
-                  {" "}
-                  Email{" "}
+                  Email
                 </label>
 
-                <div className="border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4">
+                <div className="border border-gray-100 rounded-md p-2 space-y-4 focus-within:ring sm:flex sm:items-center sm:gap-4">
                   <input
                     type="email"
                     id="UserEmail"
                     placeholder="boycaro19990@gmail.com   "
-                    className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
+                    className="w-full border-none focus:border-transparent h-10 focus:ring-transparent sm:text-sm"
                   />
 
                   <button className="mt-1 w-full bg-yellow-300 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:flex-shrink-0 rounded-xl">
@@ -51,7 +50,7 @@ const Footer = () => {
               </form>
             </div>
 
-            <div className="col-span-2 sm:col-span-1">
+            <div className="col-span-1 md:col-span-1">
               <p className="font-medium text-gray-900">Services</p>
 
               <nav aria-label="Footer Navigation - Services" className="mt-6">
@@ -104,7 +103,7 @@ const Footer = () => {
               </nav>
             </div>
 
-            <div className="col-span-2 sm:col-span-1">
+            <div className="col-span-1 md:col-span-1">
               <p className="font-medium text-gray-900">Company</p>
 
               <nav aria-label="Footer Navigation - Company" className="mt-6">
@@ -139,7 +138,7 @@ const Footer = () => {
               </nav>
             </div>
 
-            <div className="col-span-2 sm:col-span-1">
+            <div className="col-span-1 md:col-span-1">
               <p className="font-medium text-gray-900">Helpful Links</p>
 
               <nav aria-label="Footer Navigation - Company" className="mt-6">
@@ -174,7 +173,7 @@ const Footer = () => {
               </nav>
             </div>
 
-            <div className="col-span-2 sm:col-span-1">
+            <div className="col-span-1 md:col-span-1">
               <p className="font-medium text-white">Legal</p>
 
               <nav aria-label="Footer Navigation - Legal" className="mt-6">
@@ -218,7 +217,7 @@ const Footer = () => {
               </nav>
             </div>
 
-            <div className="col-span-2 sm:col-span-1">
+            <div className="col-span-1 md:col-span-1">
               <p className="font-medium text-gray-900">Downloads</p>
 
               <nav aria-label="Footer Navigation - Downloads" className="mt-6">
@@ -315,7 +314,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="/"
+                  href="/https://github.com/The-critical-thinker01/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-white transition hover:opacity-30"

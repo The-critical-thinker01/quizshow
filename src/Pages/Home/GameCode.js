@@ -6,11 +6,11 @@ const GameCode = () => {
   //641adbca6a0a3765dabd46ff
   const [code, setCode] = useState("");
   return (
-    <div className="flex justify-center  items-center w-2/3 pl-5 h-16">
+    <div className="flex flex-col justify-center  items-center w-6/7 h-24 md:h-16 my-4  space-y-2 md:ml-5 md:w-2/3   sm:flex sm:flex-row  ">
       <input
         type="text"
         placeholder="Enter Game Code Here "
-        className="w-2/5 h-full text-center mt-3 rounded-lg shadow-slate-700 shadow-md"
+        className="w-10/12 md:w-2/5   h-1/2 text-center  md:h-full rounded-lg shadow-slate-700 shadow-md    "
         onChange={(e) => {
           setCode(e.target.value);
         }}
@@ -19,7 +19,7 @@ const GameCode = () => {
         onClick={() => {
           navigate(`/quiz/${code}`);
         }}
-        className="flex justify-center items-center text-2xl m-4 w-1/5 h-full bg-yellow-300 rounded-lg"
+        className=" flex justify-center items-center w-5/12 hover:bg-white md:text-2xl md:m-4 md:w-1/5  md:h-full h-1/2 md:bg-slate-400 rounded-lg  shadow-slate-500 shadow-md bg-yellow-300"
       >
         Game Code
       </button>

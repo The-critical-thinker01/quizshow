@@ -42,7 +42,7 @@ const Slider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper w-11/12  height justify-center rounded-xl  items-center "
+        className="mySwiper w-full mx-1 heig md:w-11/12  md:height justify-center rounded-xl  items-center "
       >
         <SwiperSlide>
           <h1 className="z-10">Back to school</h1>

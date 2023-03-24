@@ -4,6 +4,9 @@
 .height{
 	height: 450px;
 }
+.heig{
+	height: 300px;
+}
 
 @keyframes spin {
 	from {

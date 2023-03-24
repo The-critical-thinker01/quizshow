@@ -7,7 +7,7 @@ import "../../App.css";
 
 const QuizPropo = () => {
   return (
-    <div className="justify-center items-center grid grid-cols-2 gap-x-3 gap-y-6  m-3 px-7 py-10  ">
+    <div className="grid grid-cols-1 gap-y-6  justify-center items-center md:grid md:grid-cols-2 md:gap-x-3  m-3 px-7 py-10  ">
       <div className="flex  flex-col  h-72  p-3 rounded-xl shadow-slate-500 shadow-md ">
         <div className="flex h-2/7   items-center">
           <h1 className=" mt-0 text-5xl text-yellow-500">For Workplace</h1>

@@ -2,12 +2,16 @@ import React from "react";
 import teach from "../../asset/images/teach.svg";
 const MakeQuizAwesom = () => {
   return (
-    <div className="flex flex-col justify-center items-center mx-5 mb-5 ">
-      <div className="flex justify-center items-center mt-12 mb-9">
-        <h1 className=" text-6xl text-yellow-500  ">MAkE QUIZ AWESOME</h1>
-      </div>
-      <div className="flex flex-col w-full">
-        <div className="flex flex-col  absolute  w-11/12 justify-end items-end   h-80 space-y-7 ">
+    <div className="flex flex-col justify-center items-center mx-5 mb-3 ">
+      <h1 className="flex  text-3xl md:text-6xl text-yellow-500 text-center   ">
+        MAkE QUIZ AWESOME
+      </h1>
+      <div className="flex justify-center items-center mb-9"></div>
+      <div className="flex flex-col w-full ">
+        <div className="w-full md:w-7/12 border-2  bg-amber-500 rounded-br-full rounded-tr-3xl">
+          <img className=" h-80 " src={teach} alt="TEACH" />
+        </div>
+        <div className="flex  flex-col  md:absolute w-full md:w-11/12 justify-end items-end p-2  space-y-1  h-80 md:space-y-7 ">
           <p>You can create quizzes, flashcards, workspaces and classes..</p>
           <p>
             There are lots of options for quizzes such as timer, password,
@@ -23,9 +27,6 @@ const MakeQuizAwesom = () => {
             quizzes along with formulas, charts, and graphs.
           </p>
           <p>more and more!</p>
-        </div>
-        <div className="w-7/12 border-2  bg-amber-500 rounded-br-full rounded-tr-3xl">
-          <img className=" h-80 ml-0 " src={teach} alt="TEACH" />
         </div>
       </div>
     </div>
