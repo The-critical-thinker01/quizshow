@@ -24,13 +24,13 @@ const Login = (props) => {
     LoginUser(user)
       .then((res) => {
         setLoading(false);
-
         console.log(res.data);
-        console.log("user  login sucessfuly !!!");
+        sessionStorage.setItem("userId", res.data.user)
         navigate("/board");
       })
       .catch((error) => {
         setLoading(false);
+        console.log(error)
         const erro = Object.values(error.response.data.errors);
         setError(erro);
       });
