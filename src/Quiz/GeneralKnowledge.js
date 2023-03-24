@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import know from "../asset/images/knowledge.png";
 import man from "../asset/images/man.png";
 import man2 from "../asset/images/man2.png";
+import faceBoy from "../asset/images/faceBoy.png";
+import girlface from "../asset/images/girlFace.png";
 import boy2 from "../asset/images/boy2.png";
 
 const GeneralKnowledge = () => {
-  const images = [man, man2, boy2];
+  const images = [man, man2, boy2, girlface, faceBoy];
 
   const [photo, setPhoto] = useState(0);
 
@@ -16,9 +18,9 @@ const GeneralKnowledge = () => {
         <button className="w-5/6 mt-3 mb-3 bg-cyan-400 shadow-slate-700 shadow-md text-5xl hover:bg-slate-100 h-20 rounded-2xl ">
           General Knowledge
         </button>
-        <div className=" flex w-1/6 p-3 justify-center items-center rounded-full bg-slate-400">
+        <div className=" flex w-1/6 p-4  overflow-hidden justify-center items-center rounded-full bg-slate-400">
           <img
-            className="w-full h-full "
+            className="w-full h-full"
             src={images[photo]}
             alt="man"
             onClick={() => {
