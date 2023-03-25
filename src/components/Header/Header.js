@@ -5,12 +5,12 @@ export default function Header() {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="w-full bg-yellow-300  shadow-black shadow-md">
+    <nav className="w-full dark:bg-slate-900 bg-yellow-300  shadow-black shadow-md">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 ">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="/">
-              <h2 className="text-3xl font-bold"> QuizShow</h2>
+              <h2 className="text-3xl dark:text-white font-bold"> QuizShow</h2>
             </a>
             <div className="md:hidden">
               <button
@@ -57,40 +57,40 @@ export default function Header() {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-gray-600 dark:text-white   p-4 hover:text-black rounded-2xl hover:bg-white ">
+              <li className="flex justify-center items-center text-2xl font-bold  mx-1text-gray-600 dark:text-white   p-4 hover:text-black rounded-2xl hover:bg-white ">
                 <a href="/" className="  hover:text-black">
                   Home
                 </a>
               </li>
-              <li className=" dark:text-white p-4 hover:bg-white  rounded-2xl">
+              <li className=" flex justify-center items-center text-2xl font-bold  mx-1 dark:text-white p-4  hover:bg-white  rounded-2xl">
                 <a href="/login" className="  hover:text-black">
                   Login
                 </a>
               </li>
-              <li className="text-black dark:text-white p-4 hover:bg-white hover:text-black rounded-2xl">
+              <li className="flex justify-center items-center text-2xl font-bold  mx-1 text-black dark:text-white p-4 hover:bg-white hover:text-black rounded-2xl">
                 <a href="/signup" className="  hover:text-black">
                   Sign Up
                 </a>
               </li>
-              <li className="text-gray-600 dark:text-white  p-4 hover:bg-white rounded-2xl">
+              <li className="flex justify-center items-center text-2xl font-bold  mx-1  dark:text-white  p-4 hover:bg-white rounded-2xl">
                 <a href="/about " className="  hover:text-black">
                   About US
                 </a>
               </li>
-              <li className="text-gray-600 dark:text-white  p-4 hover:bg-white rounded-2xl ">
+              <li className="flex justify-center items-center text-2xl font-bold  mx-1  dark:text-white  p-4 hover:bg-white rounded-2xl ">
                 <a href="/about" className="  hover:text-black">
                   Contact US
                 </a>
               </li>
-              <li>
+              <li className="flex justify-center items-center text-2xl font-bold  mx-1">
                 <a>
                   <Switcher />
                 </a>
               </li>
-              <li>
+              <li className="flex justify-center items-center  text-2xl font-bold  mx-1">
                 <a>
                   <svg
-                    className="h-md w-md text-black"
+                    className="h-md w-md dark:text-white text-black"
                     width="50"
                     height="50"
                     viewBox="0 0 24 24"

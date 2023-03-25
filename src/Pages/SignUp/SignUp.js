@@ -52,12 +52,12 @@ const SignUp = () => {
       <div className=" flex flex-col md:flex-row ">
         <div className=" bg-yellow-500 mt-2 mr-1 w-full md:w-1/2 px-2  py-2 ">
           <div className=" flex  mb-24 justify-between text bg-yellow-500   w-full px-1 py-1  h-20 ">
-            <h3 className=" flex items-center w-1/2  text-xl">
+            <h3 className=" flex items-center dark:text-white w-1/2  text-xl">
               Already have an account ?
             </h3>
             <a
               href="/login"
-              className="p-4   text-center hover:bg-slate-500 w-1/2 bg-yellow-200  shadow-slate-700 shadow-md hover:text-black rounded-xl hover:rounded-3xl"
+              className="p-4  text-2xl text-center hover:bg-slate-500 w-1/2 bg-yellow-200  shadow-slate-700 shadow-md hover:text-black rounded-xl hover:rounded-3xl"
             >
               Login
             </a>
@@ -67,25 +67,28 @@ const SignUp = () => {
             <img src={log_img} alt="ras" />
           </div>
         </div>
-        <div className="  mt-2 mr-1 w-full md:w-1/2 px-2  py-2 ">
-          <div className="flex flex-col  px-5 justify-start w-full text-lg ">
-            <div className="flex flex-col mt-2 justify-center items-center pb-10 ">
+        <div className="  mt-2 mr-1 w-full  md:w-1/2 px-2  py-2 ">
+          <div className="flex flex-col  justify-start w-full text-lg ">
+            <div className="flex flex-col mt-2 dark:bg-slate-900 dark:text-white justify-center items-center pb-10 ">
               <img
                 className="  h-32 w-32  rounded-full bg-yellow-500  "
                 src={logo}
                 alt=" Ras"
               />
-              <h1 className=" mb-3">QuizShow</h1>
+              <h1 className=" mb-3 dark:text-white">QuizShow</h1>
 
-              <h1 className="text-black text-1xl md:text-2xl italic mb-2 ">
+              <h1 className="text-black text-lg w-full dark:text-white md:text-2xl italic mb-2 ">
                 ~~ WELCOME BACK TO QUIZSHOW !!!
               </h1>
-              <h3 className="text-black italic text-1xl md:text-2xl ">
+              <h3 className="text-black dark:text-white italic text-1xl md:text-2xl ">
                 Login back to your quizshow account
               </h3>
             </div>
             {renderError}
-            <form className="flex flex-col w-full" onSubmit={handleSubmit}>
+            <form
+              className="flex flex-col w-full dark:bg-slate-900 px-2"
+              onSubmit={handleSubmit}
+            >
               <div className="flex flex-col">
                 <label className=" mb-2">Nom :</label>
                 <input

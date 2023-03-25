@@ -42,7 +42,7 @@ const Login = (props) => {
     </p>
   ));
   return (
-    <div className="bg-slate-50 animeDown ">
+    <div className="bg-slate-50 animeDown dark:bg-slate-900 ">
       {loading && (
         <div className="flex w-full justify-center items-center h-full absolute bg-transparent">
           <img src={loading_gif} alt="ras" />
@@ -50,9 +50,9 @@ const Login = (props) => {
       )}
       <div className="flex flex-col md:flex-row mt-2 justify-center  ">
         {/* insertion de l'image*/}
-        <div className=" bg-yellow-500  mr-1 w-full md:w-1/2 px-2  py-2 ">
+        <div className=" bg-yellow-500   mr-1 w-full md:w-1/2 px-2  py-2 ">
           <div className=" flex  mb-24 justify-between text bg-yellow-500   w-full px-1 py-1  h-20 ">
-            <h3 className=" flex items-center w-1/2  text-xl">
+            <h3 className=" flex items-center w-1/2 dark:text-white text-xl">
               Don't have an account ?
             </h3>
             <a
@@ -76,12 +76,12 @@ const Login = (props) => {
               src={logo}
               alt=" Ras"
             />
-            <h1 className=" mb-3 text-bold">QuizShow</h1>
+            <h1 className=" mb-3 text-bold dark:text-white ">QuizShow</h1>
 
-            <h1 className="text-black text-xl md:text-2xl italic mb-2 ">
+            <h1 className="text-black text-xl dark:text-white md:text-2xl italic mb-2 ">
               ~~ WELCOME BACK TO QUIZSHOW !!!
             </h1>
-            <h3 className="text-black italic text-xl md:text-2xl ">
+            <h3 className="text-black italic dark:text-white text-xl md:text-2xl ">
               Login back to your quizshow account
             </h3>
           </div>
@@ -92,14 +92,14 @@ const Login = (props) => {
             className="flex flex-col  px-5 justify-start w-full text-lg "
             onSubmit={HandleSubmit}
           >
-            <label className=" mb-2">Email :</label>
+            <label className=" mb-2 dark:text-white">Email :</label>
             <input
               type="email"
               className="mb-5 h-14  border-4  border-yellow-300 rounded-3xl outline-none pl-5  hover:border-slate-700 place-content-start"
               placeholder="   Email ..."
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label className="mb-2">password :</label>
+            <label className="mb-2 dark:text-white">password :</label>
             <input
               type="password"
               className="h-14  border-yellow-300  border-4  outline-none rounded-3xl pl-5  hover:border-slate-700 "
@@ -109,13 +109,16 @@ const Login = (props) => {
 
             <div className=" flex flex-row  justify-between my-10  text-xl w-full px-4 ">
               <div className="flex items-center  ">
-                <input type="checkbox" className="h-14 w-4 mr-1" /> Keep Me
-                Login
+                <input
+                  type="checkbox"
+                  className="h-14 w-4 mr-1 dark:text-white"
+                />{" "}
+                Keep Me Login
               </div>
               <div className=" flex items-center ">
                 <a
                   href="/"
-                  className=" hover:cursor-pointer underline text-yellow-500"
+                  className=" hover:cursor-pointer underline dark:text-white text-yellow-500"
                 >
                   Forgot password
                 </a>
@@ -123,7 +126,7 @@ const Login = (props) => {
             </div>
             <button
               type="submit"
-              className=" p-1/2 h-16 bg-yellow-500 ml-16 w-3/4 rounded-xl hover:bg-slate-700 mb-16 hover:text-white shadow-slate-700 shadow-lg items-center "
+              className=" p-1/2 h-16 bg-yellow-500 dark:text-white ml-16 w-3/4 rounded-xl hover:bg-slate-700 mb-16 hover:text-white shadow-slate-700 shadow-lg items-center "
             >
               Login
             </button>
