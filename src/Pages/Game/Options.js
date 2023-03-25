@@ -23,8 +23,8 @@ const Options = ({ options, SetcurrentAnswer }) => {
     const optionsDefault = options.map((item, ind) => {
       const classh =
         index !== ind
-          ? "w-1/3  mt-3 mb-3 bg-cyan-400 shadow-slate-700 shadow-md text-3xl hover:bg-slate-100 h-20 rounded-2xl mx-3 flex justify-center items-center cursor-pointer"
-          : "w-1/3 bg-cyan-800  mt-3 mb-3  shadow-slate-700 shadow-md text-3xl  h-20 rounded-2xl mx-3 flex justify-center items-center cursor-pointer";
+          ? "w-full md:w-1/3  mt-3 mb-3 bg-cyan-400 shadow-slate-700 shadow-md text-3xl hover:bg-slate-100 h-20 rounded-2xl mx-3 flex justify-center items-center cursor-pointer"
+          : "w-full md:w-1/3 bg-cyan-800  mt-3 mb-3  shadow-slate-700 shadow-md text-3xl  h-20 rounded-2xl mx-3 flex justify-center items-center cursor-pointer";
       return (
         <div
           className={classh}
