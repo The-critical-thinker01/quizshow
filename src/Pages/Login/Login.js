@@ -25,12 +25,12 @@ const Login = (props) => {
       .then((res) => {
         setLoading(false);
         console.log(res.data);
-        sessionStorage.setItem("userId", res.data.user)
+        sessionStorage.setItem("userId", res.data.user);
         navigate("/board");
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error)
+        console.log(error);
         const erro = Object.values(error.response.data.errors);
         setError(erro);
       });
@@ -48,21 +48,40 @@ const Login = (props) => {
           <img src={loading_gif} alt="ras" />
         </div>
       )}
-      <div className="flex flex-row mt-2 justify-center  ">
+      <div className="flex flex-col md:flex-row mt-2 justify-center  ">
+        {/* insertion de l'image*/}
+        <div className=" bg-yellow-500  mr-1 w-full md:w-1/2 px-2  py-2 ">
+          <div className=" flex  mb-24 justify-between text bg-yellow-500   w-full px-1 py-1  h-20 ">
+            <h3 className=" flex items-center w-1/2  text-xl">
+              Don't have an account ?
+            </h3>
+            <a
+              href="/signup"
+              className="pt-4 md:p-4   text-center hover:bg-slate-500 bg-yellow-200 w-1/2 md:w-1/3 shadow-slate-700 shadow-md hover:text-white text-3xl  rounded-3xl"
+            >
+              Sign Up
+            </a>
+          </div>
+
+          <div className="flex bg-yellow-500 z-10 mr-1  w-full">
+            <img src={log_img} alt="ras" />
+          </div>
+        </div>
+
         {/* debut pour la partir login*/}
-        <div className="text-4xl flex flex-col justify-start  w-1/2 items-center  ">
+        <div className="text-4xl flex flex-col justify-start w-full md:w-1/2 items-center  ">
           <div className="flex flex-col mt-2 justify-center items-center pb-10 ">
             <img
               className=" h-32 w-32 rounded-full bg-yellow-500  "
               src={logo}
               alt=" Ras"
             />
-            <h1 className=" mb-3">QuizShow</h1>
+            <h1 className=" mb-3 text-bold">QuizShow</h1>
 
-            <h1 className="text-black text-2xl italic mb-2 ">
+            <h1 className="text-black text-xl md:text-2xl italic mb-2 ">
               ~~ WELCOME BACK TO QUIZSHOW !!!
             </h1>
-            <h3 className="text-black italic text-2xl ">
+            <h3 className="text-black italic text-xl md:text-2xl ">
               Login back to your quizshow account
             </h3>
           </div>
@@ -120,25 +139,6 @@ const Login = (props) => {
               </a>
             </div>
           </div> */}
-        </div>
-
-        {/* insertion de l'image*/}
-        <div className=" bg-yellow-500  mr-1 w-1/2 px-2  py-2 ">
-          <div className=" flex  mb-24 justify-between text bg-yellow-500   w-full px-1 py-1  h-20 ">
-            <h3 className=" flex items-center   text-xl">
-              Don't have an account ?
-            </h3>
-            <a
-              href="/signup"
-              className="p-4   text-center hover:bg-slate-500 bg-yellow-200 w-1/3 shadow-slate-700 shadow-md hover:text-white text-3xl  rounded-3xl"
-            >
-              Sign Up
-            </a>
-          </div>
-
-          <div className="flex bg-yellow-500 z-10 mr-1  w-full">
-            <img src={log_img} alt="ras" />
-          </div>
         </div>
       </div>
     </div>

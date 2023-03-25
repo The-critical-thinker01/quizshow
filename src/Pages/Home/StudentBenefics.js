@@ -14,14 +14,14 @@ const StudentBenefics = () => {
   return (
     <div className="flex flex-col w-full ">
       <div className="flex justify-center items-center">
-        <h1 className=" text-3xl md:text-5xl text-yellow-500 mt-12 mb-5">
+        <h1 className=" text-2xl text-center md:text-5xl text-yellow-500 mt-12 mb-5">
           Benefits for Students
         </h1>
       </div>
       <div className="justify-center items-center grid grid-cols-1 md:grid-cols-3 gap-x-3 gap-y-6  m-3 px-7 py-10  ">
         <div className="flex  flex-col  h-72  p-3  rounded-xl shadow-slate-500 shadow-md bg-yellow-300 ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl">EASY TO USE</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl">EASY TO USE</h1>
           </div>
           <div className=" flex flex-row justify-center items-center h-full p-2 pl-0  ">
             <img className="w-2/5 mr-2   " src={easyuse} alt=" easy to use" />
@@ -34,7 +34,9 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3 rounded-xl shadow-slate-500 shadow-md ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl text-yellow-500">GAMIFICATION</h1>
+            <h1 className=" mt-0  text-2xl md:text-5xl text-yellow-500">
+              GAMIFICATION
+            </h1>
           </div>
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">
             <p>
@@ -47,7 +49,7 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3  rounded-xl  shadow-slate-500 shadow-md bg-yellow-300 ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl">ACCESSIBILITY</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl">ACCESSIBILITY</h1>
           </div>
 
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">
@@ -58,7 +60,9 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3  rounded-xl shadow-slate-500 shadow-md ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl text-yellow-500">INTERACTION</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl text-yellow-500">
+              INTERACTION
+            </h1>
           </div>
 
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">
@@ -72,7 +76,7 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3  rounded-xl  shadow-slate-500 shadow-md bg-yellow-300 ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-4xl">PRODUCTIVITY</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl">PRODUCTIVITY</h1>
           </div>
 
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">
@@ -83,7 +87,9 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3  rounded-xl shadow-slate-500 shadow-md ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl text-yellow-500">EARNINGS</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl text-yellow-500">
+              EARNINGS
+            </h1>
           </div>
 
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">
@@ -97,7 +103,7 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3  rounded-xl  shadow-slate-500 shadow-md bg-yellow-300 ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl">For Events</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl">For Events</h1>
           </div>
 
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">
@@ -111,7 +117,9 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3  rounded-xl shadow-slate-500 shadow-md ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl text-yellow-500">FOR EVENTS</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl text-yellow-500">
+              FOR EVENTS
+            </h1>
           </div>
 
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">
@@ -125,7 +133,9 @@ const StudentBenefics = () => {
 
         <div className="flex  flex-col  h-72  p-3  rounded-xl shadow-slate-500 shadow-md bg-yellow-300 ">
           <div className="flex h-2/7   items-center">
-            <h1 className=" mt-0 text-5xl text-black">For Training</h1>
+            <h1 className=" mt-0 text-2xl md:text-5xl text-black">
+              For Training
+            </h1>
           </div>
 
           <div className=" flex flex-row justify-center items-center  h-full p-2 pl-0  ">

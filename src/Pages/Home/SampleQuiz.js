@@ -11,7 +11,7 @@ const SampleQuiz = () => {
   return (
     <div className="flex flex-col justify-center items-center mx-5 mb-3 md:hauterPropo ">
       <div className="flex justify-center items-center  mt-12 mb-9">
-        <h1 className="text-2xl md:text-5xl text-yellow-500 mb-3 ">
+        <h1 className="text-2xl md:text-5xl text-center text-yellow-500 mb-3 ">
           SAMPLE QUIZ FROM QUIZSHOW !!
         </h1>
       </div>

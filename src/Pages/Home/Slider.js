@@ -5,7 +5,7 @@ import "./../../App.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import atschool from "./../../asset/images/atschool.jpg";
+// import atschool from "./../../asset/images/atschool.jpg";
 import childhome from "./../../asset/images/childhome.jpg";
 import childteach from "./../../asset/images/childteach.jpg";
 import girlthinke from "./../../asset/images/girlthinke.jpg";
@@ -15,7 +15,7 @@ import lauren from "./../../asset/images/lauren-mancke-aOC7TSLb1o8-unsplash.jpg"
 import dices from "./../../asset/images/dices.jpg";
 import multibox from "./../../asset/images/multibox.jpg";
 import multiplechoice from "./../../asset/images/multiplechoice.jpg";
-import onboard from "./../../asset/images/onboard.jpg";
+// import onboard from "./../../asset/images/onboard.jpg";
 import selfwork from "./../../asset/images/selfwork.jpg";
 import think from "./../../asset/images/think.jpg";
 import timecheck from "./../../asset/images/timecheck.jpg";
@@ -68,13 +68,13 @@ const Slider = () => {
           />
         </SwiperSlide>
 
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img
             className="object-fill w-full h-full"
             src={atschool}
             alt=" slide 4"
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <img
             className="object-fill w-full h-full "
@@ -118,13 +118,13 @@ const Slider = () => {
             alt=" slide 10"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img
             className="object-fill w-full h-full "
             src={onboard}
             alt=" slide 11"
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <img
             className="object-fill w-full h-full "

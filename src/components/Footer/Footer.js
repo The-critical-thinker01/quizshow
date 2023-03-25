@@ -3,30 +3,29 @@ import logo from "./../../asset/images/logo.svg";
 const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="bg-gray-900">
-      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen-xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-start lg:gap-8">
           <div className="text-teal-600">
-            <div className="flex flex-col mt-2 justify-center items-center pb-10 ">
+            <div className="flex flex-col justify-center items-center pb-10 ">
               <img
                 className=" h-20 w-40 rounded-full bg-yellow-500  "
                 src={logo}
                 alt=" Ras"
               />
+              <h2 className="text-2xl mt-2 font-bold text-center  text-white">
+                welcome To QuizShow !
+              </h2>
+
+              <p className="mt-4 text-gray-500">
+                Bienvenue dans notre site quizshow j'espere que vous avez aimé
+                nos concepts et que vous ne sortez pas sans piger une notion ?
+              </p>
             </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-2 md:mt-0 md:grid-cols-5 md:gap-y-16">
+          <div className="mt-1 grid grid-cols-2 gap-2 md:mt-0 md:grid-cols-5 md:gap-y-16">
             <div className="md:col-span-2">
-              <div>
-                <h2 className="text-2xl font-bold text-white">
-                  welcome To QuizShow !
-                </h2>
-
-                <p className="mt-4 text-gray-500">
-                  Bienvenue dans notre site quizshow j'espere que vous avez aimé
-                  nos concepts et que vous ne sortez pas sans piger une notion ?
-                </p>
-              </div>
+              {/* <div className="flex flex-col justify-center items-center border border-red-600"></div> */}
             </div>
 
             <div className="col-span-2 md:col-span-3 md:flex md:items-end">

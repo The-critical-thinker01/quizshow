@@ -3,7 +3,7 @@ import teach from "../../asset/images/teach.svg";
 const MakeQuizAwesom = () => {
   return (
     <div className="flex flex-col justify-center items-center mx-5 mb-3 ">
-      <h1 className="flex  text-3xl md:text-6xl text-yellow-500 text-center   ">
+      <h1 className="flex  text-2xl md:text-5xl text-yellow-500 text-center   ">
         MAkE QUIZ AWESOME
       </h1>
       <div className="flex justify-center items-center mb-9"></div>
